@@ -3,9 +3,9 @@ import React, { useEffect, useState } from 'react'; // JSX
 const useClock = () => {
     const [date, setDate] = useState(new Date()) // ['', (newValue)=>{}]
   
-    useEffect(() => {
-      console.log('Date updated:', date)
-    }, [date])
+    // useEffect(() => {
+    //   console.log('Date updated:', date)
+    // }, [date])
   
     useEffect(() => {
       const tid = setInterval(() => { setDate(new Date()) }, 1000)
