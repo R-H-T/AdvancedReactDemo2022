@@ -10,7 +10,6 @@ export default function MyComponent2(props) {
   const [usersName, setUsersName] = useState(localStorage.getItem('usersName') || '') // ['', (newUsersName) => {/*...*/}]
   useEffect(() => {
     console.log('User\'s name changed: ' + usersName)
-    localStorage.setItem('usersName', usersName)
   }, [usersName])
 
   const [count, setCount] = useState(0) // [0, (newCount) => {/*...*/}]
