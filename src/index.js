@@ -5,16 +5,20 @@ import './index.css';
 // import MyComponent from './Components/MyComponent';
 import MyComponent2 from './Components/MyComponent2';
 import reportWebVitals from './reportWebVitals';
-import MyContextComponent from './Components/MyContextComponent';
+import MyContextProvider from './Components/MyContextProvider';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-  <MyContextComponent>
+  <MyContextProvider>
   { /* <App /> */ }
   { /* <MyComponent name="Gawee" /> */ }
+  { /* <MyChatContextProvider>
+      <Chat />
+      <ChatToolbar />
+</MyChatContextProvider>*/ }
     <MyComponent2 />
-  </MyContextComponent>
+  </MyContextProvider>
   </React.StrictMode>
 );
 
