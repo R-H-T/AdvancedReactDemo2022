@@ -8,6 +8,7 @@ export default function MyComponent2(props) {
   const { clock } = useClock()
 
   const [usersName, setUsersName] = useState(localStorage.getItem('usersName') || '') // ['', (newUsersName) => {/*...*/}]
+  // useLayoutEffect
   useEffect(() => {
     console.log('User\'s name changed: ' + usersName)
   }, [usersName])

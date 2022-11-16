@@ -1,13 +1,9 @@
 import React from 'react'
 
-class MyComponent extends React.Component {
+class MyComponent extends React.Component { // <MyComponent name="Gawee" />
     constructor(props) {
       super(props)
       // console.log('constructor')
-      const { name="User" } = props
-      this.props = {
-        name
-      }
       this.state = { date: new Date() }
     }
   
@@ -27,11 +23,7 @@ class MyComponent extends React.Component {
   
     shouldComponentUpdate(nextProps, nextState) {
       // console.log('shouldComponentUpdate')
-      if (this.props.name === nextProps.name && this.state.date === nextState.date) {
-        return false
-      } else {
-        return true
-      }
+      return (this.props.name === nextProps.name && this.state.date === nextState.date)
     }
   
     render() {
